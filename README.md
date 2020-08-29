@@ -77,18 +77,29 @@ $ curl http://127.0.0.1:3000/?name=SSVM
 hello SSVM
 ```
 
-### More exercises
+# The Quadratic equation webapp example
 
-Now, you can copy and paste code from [this project](https://github.com/second-state/wasm-learning/tree/master/nodejs/functions).
+In this example, we demonstrate how to use JSON to call Rust functions in SSVM from JavaScript. Read about Getting started with Rust functions in Node.js.
+## Prerequisites
 
-* `src/lib.rs` --> Replace with [code here](https://github.com/second-state/wasm-learning/blob/master/nodejs/functions/src/lib.rs)
-* `Cargo.toml` --> Replace with [code here](https://github.com/second-state/wasm-learning/blob/master/nodejs/functions/Cargo.toml)
-* `node/app.js` --> Replace with [code here](https://github.com/second-state/wasm-learning/blob/master/nodejs/functions/node/app.js)
+If you have not done so already, follow these simple instructions to install Rust, Node.js, SSVM, and ssvmup.
+## Build the application
 
-Click on Run to see the build output in Terminal window, and application console output in Debug window.
+$ ssvmup build
 
-Try to log into GitHub from the IDE, and use the IDE's GitHub integration features to commit the changes, push the changes back into your forked repository, and perhaps even send us a Pull Request from the IDE!
+## Test
 
+$ cd node
+$ node test.js
+[0.5,-3.0]
+
+## Web app
+
+$ cd node
+$ node server.js
+Listening at http://localhost:8080
+
+Then point your browser to http://hostname:8080 enter numeric values for a, b, c, and hit the "Solve" button to find the roots.
 ## Read more:
 
 * [The Case for WebAssembly on the Server-side](https://www.secondstate.io/articles/why-webassembly-server/)
